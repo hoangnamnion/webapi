@@ -5,5 +5,5 @@
   node_bundler = "esbuild"
 
 [template.environment]
-  SUPABASE_URL = ""
-  SUPABASE_KEY = ""
+  SUPABASE_URL = "https://uzumttrkkcmbpduuilgf.supabase.co"
+  SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6dW10dHJra2NtYnBkdXVpbGdmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ3MjA0MjAsImV4cCI6MjA3MDI5NjQyMH0.E_xaWBG-xa1u3nShwDA7mTU_Fo2XMXghfW8vR1s82U0"
