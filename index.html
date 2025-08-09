@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase + Netlify Demo</title>
+</head>
+<body>
+    <h1>Supabase + Netlify Functions Demo</h1>
+    <button id="create">Tạo mã mới</button>
+    <button id="load">Xem danh sách mã</button>
+    <pre id="output"></pre>
+
+    <script>
+        async function createCode() {
+            const res = await fetch("/.netlify/functions/codes/generate", { method: "POST" });
+            const data = await res.json();
+            document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+        }
+
+        async function loadCodes() {
+            const res = await fetch("/.netlify/functions/codes");
+            const data = await res.json();
+            document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+        }
+
+        document.getElementById("create").addEventListener("click", createCode);
+        document.getElementById("load").addEventListener("click", loadCodes);
+    </script>
+</body>
+</html>
